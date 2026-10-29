@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ergonomics & Posture Checker | Ase's Tech World</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Posture & Ergonomics Checker by Ase</h1>
+      <p>A quick health-tech assessment to evaluate your workspace habits and physical therapy needs.</p>
+    </header>
+
+    <form id="ergoForm" class="card">
+      <div class="form-group">
+        <label for="sittingHours">Daily Sitting Hours:</label>
+        <input type="number" id="sittingHours" min="1" max="24" required placeholder="e.g. 8">
+      </div>
+
+      <div class="form-group">
+        <label for="breakFrequency">How often do you stand up/stretch?</label>
+        <select id="breakFrequency" required>
+          <option value="good">Every 30 - 60 minutes</option>
+          <option value="moderate">Every 2 - 3 hours</option>
+          <option value="poor">Rarely (4+ hours seated)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="screenLevel">Is your monitor at eye level?</label>
+        <select id="screenLevel" required>
+          <option value="yes">Yes, directly at eye level</option>
+          <option value="no">No, I look down (laptops/low desks)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Calculate Assessment</button>
+    </form>
+
+    <div id="resultCard" class="card result-card hidden">
+      <h2>Your Ergonomic Health Score</h2>
+      <div id="scoreDisplay" class="score">0/100</div>
+      <p id="recommendationText" class="recommendation"></p>
+      <button id="resetBtn" class="btn btn-secondary">Re-assess</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
