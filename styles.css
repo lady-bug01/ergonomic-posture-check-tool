@@ -111,3 +111,71 @@ input, select {
 .recommendation {
   line-height: 1.6;
 }
+.article-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.article-link a,
+.back-link,
+.article-body a:not(.btn) {
+  color: #38BDF8;
+}
+
+/* Article page */
+.container.article {
+  max-width: 720px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.byline {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.article-body {
+  background: rgba(11, 25, 45, 0.6);
+  line-height: 1.7;
+}
+
+.article-body h2 {
+  color: #38BDF8;
+  font-size: 1.25rem;
+  margin: 28px 0 10px;
+}
+
+.article-body p,
+.article-body ul {
+  margin-bottom: 14px;
+}
+
+.article-body ul {
+  padding-left: 22px;
+}
+
+.article-body li {
+  margin-bottom: 6px;
+}
+
+.article-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.btn-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
