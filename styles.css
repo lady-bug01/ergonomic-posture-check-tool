@@ -12,7 +12,10 @@
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/* Hide the Netlify floating badge on free tier */
+#netlify-badge {
+  display: none !important;
+}
 body {
 
   display: flex;
