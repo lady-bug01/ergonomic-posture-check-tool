@@ -46,18 +46,6 @@ max-width: 100%;
 animation: fadeInZoom 1s ease-out forwards;
 
   
-  
-}@media-screen and (max-width:768px;){
-  body{
-    width:100%; }
-}
-
-#img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-
 }
 
 .container {
