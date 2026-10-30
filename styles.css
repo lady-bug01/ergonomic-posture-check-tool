@@ -16,27 +16,48 @@
 #netlify-badge {
   display: none !important;
 }
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95); 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); 
+  }
+}
+
 body {
 
   display: flex;
-  position: relative;
-    background-image: linear-gradient(
+  position:relative;    
+  background-image: linear-gradient(
         to right, 
         rgba(11, 25, 45, 0.85), 
         rgba(11, 25, 45, 0.70)
     ), url('woman_sitting.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
   justify-content: center;
   align-items: center;
 max-width: 100%;
-  padding: 20px;height: 100vh;
+ height:100vh;
+ padding:10px;
+animation: fadeInZoom 1s ease-out forwards;
 
-  /*
-    min-height: 100vh;
-  display: flex;
-  */
   
+  
+}@media-screen and (max-width:768px;){
+  body{
+    width:100%; }
+}
+
+#img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
 }
 
 .container {
