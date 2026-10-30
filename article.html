@@ -3,76 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Your Desk Is Hurting You | Ase's Tech World</title>
-  <meta name="description" content="How long sitting hours, rare breaks, and a low screen strain your neck and back, plus simple fixes you can start today.">
-  <link rel="stylesheet" href="styles.css">
+  <title>Why Your Desk Is Hurting You (and How to Fix It) | Ase's Tech World</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #0077b6;
+      --text-color: #2b2d42;
+      --light-bg: #f8f9fa;
+      --white: #ffffff;
+      --max-width: 800px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-color);
+      line-height: 1.7;
+      background-color: var(--light-bg);
+    }
+
+    /* Hero Banner with Background Image & Overlay */
+    .article-hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      min-height: 60vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 4rem 1.5rem;
+      color: var(--white);
+      animation: fadeInZoom 1.2s ease-out forwards;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85));
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--white);
+    }
+
+    .article-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
+    /* Main Article Content Container */
+    .article-container {
+      max-width: var(--max-width);
+      margin: -3rem auto 4rem auto;
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+      position: relative;
+      z-index: 3;
+      animation: fadeInZoom 1s ease-out 0.3s backwards;
+    }
+
+    /* Typography & Spacing */
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+      color: #334155;
+    }
+
+    /* Call to Action Box */
+    .cta-box {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary-color);
+      padding: 2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.75rem;
+      font-size: 1.3rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .cta-btn:hover {
+      background-color: #0369a1;
+      transform: translateY(-2px);
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-style: italic;
+      margin-top: 3rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1rem;
+    }
+
+    /* Entrance Animations */
+    @keyframes fadeInZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.98) translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    /* Mobile Responsive Media Queries */
+    @media screen and (max-width: 768px) {
+      .article-hero {
+        min-height: 50vh;
+        padding: 3rem 1rem;
+      }
+
+      .article-container {
+        margin: -2rem 1rem 2rem 1rem;
+        padding: 1.5rem 1.25rem;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="container article">
-    <a href="/" class="back-link">&larr; Back to the Posture Checker</a>
 
-    <header class="header">
+  <!-- Hero Section with Background Image & Dark Overlay -->
+  <header class="article-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <a href="index.html" class="back-link">← Back to the Posture Checker</a>
       <h1>Why Your Desk Is Hurting You (and How to Fix It)</h1>
-      <p class="byline">By Ase &middot; About a 5-minute read</p>
-    </header>
+      <p class="article-meta">By Ase · About a 5-minute read</p>
+    </div>
+  </header>
 
-    <article class="card article-body">
-      <img src="woman-bad-posture-ergonomics-woman.webp" alt="A woman hunched forward over a laptop with poor sitting posture" class="article-img">
+  <!-- Main Article Body -->
+  <main class="article-container">
+    <p>Most of us don't notice our posture until something hurts. A stiff neck after a long video call, a dull ache low in the back by mid-afternoon, or tight shoulders that never quite loosen up. These problems don't come from one bad day. They build up from the same small habits repeated for hours, every workday.</p>
 
-      <p>Most of us don't notice our posture until something hurts. A stiff neck after a long video call, a dull ache low in the back by mid-afternoon, tight shoulders that never quite loosen up. These problems don't come from one bad day. They build up from the same small habits repeated for hours, every workday.</p>
+    <p>The Posture & Ergonomics Checker looks at three of those habits: how long you sit, how often you get up, and where your screen is. This article explains why each one matters and what you can do about it.</p>
 
-      <p>The <a href="/">Posture &amp; Ergonomics Checker</a> looks at three of those habits: how long you sit, how often you get up, and where your screen is. This article explains why each one matters and what you can do about it.</p>
+    <h2>1. Sitting hours: the time adds up</h2>
+    <p>The body handles sitting fine in short stretches. Trouble starts when sitting becomes the default for most of the day. Hip flexors shorten, glute muscles stop working, and the lower back ends up carrying load that the core and hips should be sharing. Circulation in the legs slows down too.</p>
+    <p>That is why the checker starts lowering your score past six hours of sitting a day, and lowers it again past nine. You don't need to quit your desk job. The goal is to cut into those hours wherever you can:</p>
+    <ul>
+      <li>Take phone calls standing or walking.</li>
+      <li>Use a standing desk, or a high counter, for part of the day.</li>
+      <li>Walk for 10 minutes after lunch instead of going straight back to your seat.</li>
+    </ul>
 
-      <h2>1. Sitting hours: the time adds up</h2>
-      <p>The body handles sitting fine in short stretches. Trouble starts when sitting becomes the default for most of the day. Hip flexors shorten, glute muscles stop working, and the lower back ends up carrying load that the core and hips should be sharing. Circulation in the legs slows down too.</p>
-      <p>That is why the checker starts lowering your score past six hours of sitting a day, and lowers it again past nine. You don't need to quit your desk job. The goal is to cut into those hours wherever you can.</p>
-      <ul>
-        <li>Take phone calls standing or walking.</li>
-        <li>Use a standing desk, or a high counter, for part of the day.</li>
-        <li>Walk for 10 minutes after lunch instead of going straight back to your seat.</li>
-      </ul>
+    <h2>2. Break frequency: movement beats "perfect" posture</h2>
+    <p>Physical therapists often say "your best posture is your next posture." Even a perfectly aligned position becomes tiring when you hold it for hours. Muscles that stay tense without a break get fatigued and sore, and spinal discs depend on movement to stay healthy.</p>
+    <p>This is the biggest factor in the checker. Getting up every 30 to 60 minutes costs you nothing. Staying seated for four hours or more is the largest single deduction.</p>
+    <p>A useful micro-break takes about two minutes:</p>
+    <ul>
+      <li><strong>Stand and reach:</strong> lift both arms overhead and lean gently to each side.</li>
+      <li><strong>Chin tucks:</strong> pull your chin straight back, making a "double chin," and hold for 3 seconds. Repeat 10 times.</li>
+      <li><strong>Shoulder rolls:</strong> roll your shoulders backward slowly, 10 times.</li>
+      <li><strong>Hip flexor stretch:</strong> step one foot back into a short lunge and hold for 20 seconds on each side.</li>
+    </ul>
+    <p>Set a timer, or tie breaks to natural moments like refilling your water, so you don't have to remember.</p>
 
-      <h2>2. Break frequency: movement beats "perfect" posture</h2>
-      <p>Physical therapists often say <em>"your best posture is your next posture."</em> Even a perfectly aligned position becomes tiring when you hold it for hours. Muscles that stay tense without a break get fatigued and sore, and spinal discs depend on movement to stay healthy.</p>
-      <p>This is the biggest factor in the checker. Getting up every 30 to 60 minutes costs you nothing. Staying seated for four hours or more is the largest single deduction.</p>
-      <p>A useful micro-break takes about two minutes:</p>
-      <ul>
-        <li><strong>Stand and reach:</strong> lift both arms overhead and lean gently to each side.</li>
-        <li><strong>Chin tucks:</strong> pull your chin straight back, making a "double chin," and hold for 3 seconds. Repeat 10 times.</li>
-        <li><strong>Shoulder rolls:</strong> roll your shoulders backward slowly, 10 times.</li>
-        <li><strong>Hip flexor stretch:</strong> step one foot back into a short lunge and hold for 20 seconds on each side.</li>
-      </ul>
-      <p>Set a timer, or tie breaks to natural moments like refilling your water, so you don't have to remember.</p>
+    <h2>3. Screen height: the hidden weight on your neck</h2>
+    <p>Your head weighs about 5 kg (around 11 lb) when it sits straight above your shoulders. Tilt it forward to look down at a laptop and the load on your neck goes up sharply, to several times that at steep angles. Over time this "tech neck" posture can cause neck pain, tension headaches, and rounded shoulders.</p>
+    <p>The fix is simple: bring the screen up to your eyes instead of bringing your eyes down to the screen:</p>
+    <ul>
+      <li>The top of the monitor should sit at or slightly below eye level.</li>
+      <li>Keep the screen about an arm's length away.</li>
+      <li>On a laptop, use a stand or a stack of books, plus a separate keyboard and mouse.</li>
+    </ul>
 
-      <h2>3. Screen height: the hidden weight on your neck</h2>
-      <p>Your head weighs about 5 kg (around 11 lb) when it sits straight above your shoulders. Tilt it forward to look down at a laptop and the load on your neck goes up sharply, to several times that at steep angles. Over time this "tech neck" posture can cause neck pain, tension headaches, and rounded shoulders.</p>
-      <p>The fix is simple: bring the screen up to your eyes instead of bringing your eyes down to the screen.</p>
-      <ul>
-        <li>The top of the monitor should sit at or slightly below eye level.</li>
-        <li>Keep the screen about an arm's length away.</li>
-        <li>On a laptop, use a stand or a stack of books, plus a separate keyboard and mouse.</li>
-      </ul>
+    <h2>A quick workstation checklist</h2>
+    <ul>
+      <li>Feet flat on the floor, or on a footrest.</li>
+      <li>Knees at roughly hip height.</li>
+      <li>Lower back supported by the chair, or a small cushion.</li>
+      <li>Elbows close to your body and bent about 90°.</li>
+      <li>Wrists straight while you type.</li>
+      <li>Screen at eye level, an arm's length away.</li>
+    </ul>
 
-      <h2>A quick workstation checklist</h2>
-      <ul>
-        <li>Feet flat on the floor, or on a footrest.</li>
-        <li>Knees at roughly hip height.</li>
-        <li>Lower back supported by the chair, or a small cushion.</li>
-        <li>Elbows close to your body and bent about 90&deg;.</li>
-        <li>Wrists straight while you type.</li>
-        <li>Screen at eye level, an arm's length away.</li>
-      </ul>
+    <h2>When to see a professional</h2>
+    <p>Small changes make a real difference for everyday aches. Still, see a doctor or physical therapist if pain lasts for weeks, wakes you at night, or comes with numbness, tingling, or weakness in your arms or legs. A physical therapist can assess how you move and give you exercises suited to your body.</p>
 
-      <h2>When to see a professional</h2>
-      <p>Small changes make a real difference for everyday aches. Still, see a doctor or physical therapist if pain lasts for weeks, wakes you at night, or comes with numbness, tingling, or weakness in your arms or legs. A physical therapist can assess how you move and give you exercises suited to your body.</p>
+    <!-- Call to Action back to your checker tool -->
+    <div class="cta-box">
+      <h3>Curious where you stand?</h3>
+      <p>The checker takes under a minute. Try it now, make one or two changes, and see how your score improves!</p>
+      <a href="index.html" class="cta-btn">Take the Posture Assessment</a>
+    </div>
 
-      <h2>Check your score</h2>
-      <p>Curious where you stand? The checker takes under a minute. Try it now, make one or two of the changes above, and come back in a couple of weeks to see how your score changes.</p>
-
-      <a href="/" class="btn btn-link">Take the Posture Assessment</a>
-
-      <p class="disclaimer">This article is for general information only and isn't a substitute for professional medical advice.</p>
-    </article>
+    <p class="disclaimer">This article is for general information only and isn't a substitute for professional medical advice.</p>
   </main>
+
 </body>
 </html>
