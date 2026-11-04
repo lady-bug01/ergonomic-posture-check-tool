@@ -35,7 +35,7 @@ body {
         to right, 
         rgba(11, 25, 45, 0.85), 
         rgba(11, 25, 45, 0.70)
-    ), url('woman_sitting.jpg');
+    ), url('sit.jpg');
     background-size:cover;
     background-repeat:no-repeat;
   justify-content: center;
