@@ -12,10 +12,7 @@
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* Hide the Netlify floating badge on free tier */
-#netlify-badge {
-  display: none !important;
-}
+
 @keyframes fadeInZoom {
   0% {
     opacity: 0;
@@ -35,7 +32,7 @@ body {
         to right, 
         rgba(11, 25, 45, 0.85), 
         rgba(11, 25, 45, 0.70)
-    ), url('sit.jpg');
+    ), url('sitt.jpg');
     background-size:cover;
     background-repeat:no-repeat;
   justify-content: center;
